@@ -24,7 +24,7 @@ export default function Page() {
           <span className="flex size-9 items-center justify-center rounded-xl bg-brand text-brand-foreground shadow-lg shadow-brand/20">
             <Sparkles className="size-4" strokeWidth={2.5} aria-hidden="true" />
           </span>
-          <span className="font-sans text-lg font-semibold tracking-tight text-foreground">Audvetax</span>
+          <span className="font-sans text-lg font-semibold tracking-tight text-foreground">Audvertax</span>
         </a>
         <span className="rounded-full border border-border bg-card/70 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
           Launching soon
