@@ -20,7 +20,7 @@ export default function Page() {
       <div className="pointer-events-none absolute -right-8 top-40 h-56 w-56 rounded-full border border-brand/10" />
 
       <header className="relative z-10 flex w-full items-center justify-between px-6 py-6 sm:px-10 lg:px-16">
-        <a href="#top" className="flex items-center gap-3" aria-label="Audvetax home">
+        <a href="#top" className="flex items-center gap-3" aria-label="Audvertax home">
           <span className="flex size-9 items-center justify-center rounded-xl bg-brand text-brand-foreground shadow-lg shadow-brand/20">
             <Sparkles className="size-4" strokeWidth={2.5} aria-hidden="true" />
           </span>
@@ -42,7 +42,7 @@ export default function Page() {
               See what&apos;s next.
             </h1>
             <p className="mt-7 max-w-lg text-pretty text-base leading-7 text-muted-foreground sm:text-lg">
-              Audvetax is building a sharper, simpler way to move forward. Something thoughtful is almost ready for you.
+              Audvertax is building a sharper, simpler way to move forward. Something thoughtful is almost ready for you.
             </p>
 
             <form onSubmit={handleSubmit} className="mt-10 max-w-md">
@@ -65,7 +65,7 @@ export default function Page() {
                   {submitted ? <Check className="size-4" aria-hidden="true" /> : <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />}
                 </button>
               </div>
-              <p className="mt-3 text-xs text-muted-foreground">No noise. Just a note when Audvetax is ready.</p>
+              <p className="mt-3 text-xs text-muted-foreground">No noise. Just a note when Audvertax is ready.</p>
             </form>
           </div>
 
@@ -81,7 +81,7 @@ export default function Page() {
                   <p className="mt-2 text-4xl font-semibold tracking-[-0.05em] text-brand-foreground sm:text-5xl">almost here.</p>
                 </div>
                 <div className="flex items-end justify-between border-t border-brand-foreground/20 pt-5 text-brand-foreground/70">
-                  <span className="font-mono text-[10px] uppercase tracking-[0.18em]">Audvetax</span>
+                  <span className="font-mono text-[10px] uppercase tracking-[0.18em]">Audvertax</span>
                   <span className="font-mono text-[10px]">2026</span>
                 </div>
               </div>
@@ -94,7 +94,7 @@ export default function Page() {
       </section>
 
       <footer className="relative z-10 flex items-center justify-between border-t border-border/70 px-6 py-5 text-xs text-muted-foreground sm:px-10 lg:px-16">
-        <span>© 2026 Audvetax</span>
+        <span>© 2026 Audvertax</span>
         <span>Made for what&apos;s next.</span>
       </footer>
     </main>

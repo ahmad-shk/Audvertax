@@ -3,8 +3,8 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Audvetax — Coming Soon',
-  description: 'Audvetax is building something thoughtful for what is next. Join the launch list.',
+  title: 'Audvertax — Coming Soon',
+  description: 'Audvertax is building something thoughtful for what is next. Join the launch list.',
   generator: 'v0.app',
   icons: {
     icon: [
