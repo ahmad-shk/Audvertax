@@ -15,7 +15,7 @@ const services = [
       'Business support services',
       'Available in major cities'
     ],
-    pricing: 'Starting from £49/month',
+    pricing: 'Starting from £1/month',
     countries: ['UK', 'USA', 'Canada']
   },
   {
@@ -31,7 +31,7 @@ const services = [
       'Business documentation',
       'Ongoing support'
     ],
-    pricing: 'Starting from £199',
+    pricing: 'Starting from £1',
     countries: ['UK', 'USA', 'Canada']
   },
   {
@@ -47,7 +47,7 @@ const services = [
       'International access',
       'Mobile & desktop apps'
     ],
-    pricing: 'Starting from £9.99/month',
+    pricing: 'Starting from £1/month',
     countries: ['UK', 'USA', 'Canada']
   },
   {
@@ -63,7 +63,7 @@ const services = [
       'Compliance reminders',
       'Expert guidance'
     ],
-    pricing: 'Starting from £99/year',
+    pricing: 'Starting from £1/year',
     countries: ['UK', 'USA', 'Canada']
   },
   {

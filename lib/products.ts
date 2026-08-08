@@ -9,16 +9,16 @@ export interface Product {
 }
 
 const pricesInPence: Record<string, number> = {
-  'virtual-offices': 6000,
-  'ltd-company-formation': 9900,
+  'virtual-offices': 100,
+  'ltd-company-formation': 100,
   'uk-bank-accounts': 0,
-  'company-annual-accounts': 15000,
-  'company-closure': 19900,
-  'shared-offices': 6000,
-  'private-offices': 50000,
-  'custom-website': 150000,
-  'shopify-setup': 200000,
-  'international-bank': 29900,
+  'company-annual-accounts': 100,
+  'company-closure': 100,
+  'shared-offices': 100,
+  'private-offices': 100,
+  'custom-website': 100,
+  'shopify-setup': 100,
+  'international-bank': 100,
 }
 
 export const PRODUCTS: Product[] = servicesData.map((service) => ({

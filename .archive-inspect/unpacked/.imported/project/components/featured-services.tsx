@@ -7,7 +7,7 @@ export default function FeaturedServices() {
     {
       icon: Building2,
       title: 'Shared Offices / Coworking Space',
-      description: 'Rent shared office / coworking space from only £60 per person per month.',
+      description: 'Rent shared office / coworking space from only £1 per person per month.',
     },
     {
       icon: Building2,

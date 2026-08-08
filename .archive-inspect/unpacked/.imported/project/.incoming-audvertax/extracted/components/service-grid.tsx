@@ -23,8 +23,8 @@ const services = {
     },
     {
       title: 'Shared Offices / Coworking Space',
-      description: 'Rent shared office / coworking space from only £60 per person per month',
-      price: 'From £60/month',
+      description: 'Rent shared office / coworking space from only £1 per person per month',
+      price: 'From £1/month',
     },
     {
       title: 'Private Offices',
@@ -114,8 +114,8 @@ const services = {
     },
     {
       title: 'Company Logo Creation',
-      description: 'Company logo Creation only £60 inc VAT',
-      price: '£60',
+      description: 'Company logo Creation only £1 inc VAT',
+      price: '£1',
     },
   ],
 }

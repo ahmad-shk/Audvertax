@@ -43,7 +43,7 @@ const DEMO_ACCOUNT: StoredAccount = {
   company: 'Audvetax Demo Company',
   purchasedServices: [
     { serviceId: 'ltd-company-formation', serviceName: 'UK LTD Company Formation', price: '£99.00', datePurchased: '12 March 2026', quantity: 1 },
-    { serviceId: 'virtual-offices', serviceName: 'Virtual Office Address', price: '£60.00', datePurchased: '14 March 2026', quantity: 1 },
+    { serviceId: 'virtual-offices', serviceName: 'Virtual Office Address', price: '£1.00', datePurchased: '14 March 2026', quantity: 1 },
   ],
 }
 
