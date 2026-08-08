@@ -1,10 +1,14 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
+import { LanguageProvider } from './language-context'
+import WhatsAppButton from '@/components/whatsapp-button'
+import { CartProvider } from '@/components/cart-provider'
+import { UserProvider } from '@/app/user-context'
 
 export const metadata: Metadata = {
-  title: 'Audvertax — Coming Soon',
-  description: 'Audvertax is building something thoughtful for what is next. Join the launch list.',
+  title: 'Audvetax - Global Business Support Solutions',
+  description: 'Affordable office rental, company formation, and business support solutions. Virtual offices, shared spaces, and business services in UK, USA, and Canada.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -26,8 +30,11 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'light',
-  themeColor: '#08ace0',
+  colorScheme: 'light dark',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#020617' },
+  ],
 }
 
 export default function RootLayout({
@@ -36,9 +43,16 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="bg-background">
+    <html lang="en" className="bg-white">
       <body className="antialiased">
-        {children}
+        <LanguageProvider>
+          <UserProvider>
+            <CartProvider>
+              {children}
+              <WhatsAppButton />
+            </CartProvider>
+          </UserProvider>
+        </LanguageProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
