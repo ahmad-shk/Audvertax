@@ -45,9 +45,9 @@ export default function SignupPage() {
       <div className="border-t-4 border-cyan-400">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition">
-            <span aria-hidden="true" className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-400 to-blue-500 text-lg font-black text-white">A</span>
+            <img src="/synapto.png" alt="SYNAPTO Logo" className="h-8 w-auto sm:h-10" />
             <span className="text-2xl font-bold">
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">AUDVETAX</span>
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">SYNAPTO</span>
               <span className="ml-1 text-gray-900">SYSTEMS</span>
             </span>
           </Link>
@@ -65,7 +65,7 @@ export default function SignupPage() {
                   </svg>
                 </div>
               </div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">Welcome to Audvetax!</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">Welcome to Synapto!</h2>
               <p className="text-gray-600 mb-6">Your account has been created successfully. Check your email to verify your account.</p>
               <Link href="/login" className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-bold rounded-lg hover:shadow-lg transition">
                 Go to Login
@@ -75,7 +75,7 @@ export default function SignupPage() {
             <div>
               <div className="text-center mb-8">
                 <h1 className="text-3xl font-bold text-gray-900 mb-2">Create Account</h1>
-                <p className="text-gray-600">Join Audvetax today</p>
+                <p className="text-gray-600">Join Synapto today</p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-4">

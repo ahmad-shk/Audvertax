@@ -46,14 +46,14 @@ export default function Header() {
   }, [lastScrollY])
 
   return (
-    <header className={`sticky top-0 z-50 border-t-4 border-cyan-400 bg-white/95 shadow-sm backdrop-blur-md transition-transform duration-300 ${
+    <header className={`sticky top-0 z-50 shadow-sm backdrop-blur-md transition-transform duration-300 ${
       isHeaderVisible ? 'translate-y-0' : '-translate-y-full'
     }`}>
       {/* Top Contact Bar */}
-      <div className="overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-400 px-4 py-1.5 text-gray-900 sm:px-6 lg:px-8">
+      <div className="overflow-hidden bg-gradient-to-r from-[#0000ca] via-[blue] to-cyan-400 px-4 py-2 text-gray-900 sm:px-6 lg:px-8">
         <div className="header-marquee-track mx-auto flex w-max items-center gap-8 whitespace-nowrap text-xs font-medium sm:text-sm">
           {[0, 1].map((copy) => (
-            <div key={copy} className="flex items-center gap-5 sm:gap-6" aria-hidden={copy === 1}>
+            <div key={copy} className="flex items-center gap-5 sm:gap-6 text-white font-semibold" aria-hidden={copy === 1}>
               <a href="mailto:info@audvetax.com" className="flex items-center gap-1.5 hover:text-gray-700">
                 <Mail size={14} />
                 <span>{t('email')}</span>
@@ -94,10 +94,10 @@ export default function Header() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex min-w-0 shrink items-center gap-2 hover:opacity-80 transition sm:gap-3">
-              <span aria-hidden="true" className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-400 to-blue-500 text-lg font-black text-white sm:h-10 sm:w-10 sm:text-2xl">A</span>
+              <img src="/synapto.png" alt="SYNAPTO Logo" className="h-8 w-auto sm:h-10" />
               <div className="min-w-0">
                 <div className="truncate text-lg font-bold text-gray-900 sm:text-xl">
-                  <span className="bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent">AUDVETAX</span>
+                  <span className="bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent">SYNAPTO</span>
                   <span className="ml-1 text-gray-900"></span>
                 </div>
                 <p className="mt-0.5 text-[10px] leading-tight text-gray-600 sm:text-xs">Global Business Support Solutions</p>
@@ -148,7 +148,7 @@ export default function Header() {
                 Canada
               </button>
               <CartLink />
-              {isLoggedIn ? <div className="mt-4 flex gap-2"><Link href="/dashboard" className="flex-1 rounded border-2 border-cyan-400 px-4 py-2 text-center text-sm font-bold text-slate-950">Dashboard</Link><button onClick={() => { logout(); router.push('/') }} className="rounded border-2 border-slate-900 px-4 py-2 text-sm font-bold text-slate-900">Sign out</button></div> : <Link href="/login" className="mt-4 block w-full rounded border-2 border-gray-900 px-4 py-2 text-center text-sm font-medium text-gray-900 transition hover:bg-gray-50">{t('clientLogin')}</Link>}
+              {isLoggedIn ? <div className="mt-4 flex gap-2"><Link href="/dashboard" className="flex-1 rounded border-2 border-cyan-400 px-4 py-2 text-center text-sm font-bold text-blue-600">Dashboard</Link><button onClick={() => { logout(); router.push('/') }} className="rounded border-2 border-[#7070ff] px-4 py-2 text-sm font-bold text-blue-600">Sign out</button></div> : <Link href="/login" className="mt-4 block w-full rounded border-2 border-gray-900 px-4 py-2 text-center text-sm font-medium text-blue-600 transition hover:bg-gray-50">{t('clientLogin')}</Link>}
             </div>
           )}
         </div>
