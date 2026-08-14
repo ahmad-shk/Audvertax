@@ -3,7 +3,7 @@ export default function VideoSection() {
     <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Start, Grow And Get Support For Your Business With Ease With Audvetax&apos;
+          Start, Grow And Get Support For Your Business With Ease With Synapto&apos;
           <span className="bg-cyan-400 px-3 py-1 ml-2">Proven Expertise</span>
           & Hassle Free Solutions. Watch Our Corporate Video To Learn More About Us And What We Can Offer.
         </h2>
@@ -24,7 +24,7 @@ export default function VideoSection() {
         </div>
 
         <p className="text-gray-600 mt-8 leading-relaxed">
-          Audvetax provides affordable office rental and business support solutions to help entrepreneurs and small businesses overcome common challenges. From company formation to office rental and virtual office / registered agent services, we can help you to streamline your operations and reduce your costs. We can also assist you with statutory filings and with opening bank accounts in various currencies around the world. We operate in the UK, Canada and USA a provide a vast array of business support solutions. With over 100,000 businesses assisted to date and thousands of 5-star reviews, we would love to become your next trusted business partner.
+          Synapto provides affordable office rental and business support solutions to help entrepreneurs and small businesses overcome common challenges. From company formation to office rental and virtual office / registered agent services, we can help you to streamline your operations and reduce your costs. We can also assist you with statutory filings and with opening bank accounts in various currencies around the world. We operate in the UK, Canada and USA a provide a vast array of business support solutions. With over 100,000 businesses assisted to date and thousands of 5-star reviews, we would love to become your next trusted business partner.
         </p>
       </div>
     </section>

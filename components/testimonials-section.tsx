@@ -25,12 +25,12 @@ const testimonials = [
   },
   {
     name: 'Clair Roe',
-    text: 'I used Audvetax to incorporate my company, they did a great job, it was done quickly and their communication was excellent. They delivered on all the bonuses too.',
+    text: 'I used Synapto to incorporate my company, they did a great job, it was done quickly and their communication was excellent. They delivered on all the bonuses too.',
     rating: 5,
   },
   {
     name: 'Mark Chapman',
-    text: "I recently opted for Audvetax Offices' Virtual Office and Company Formation services, and couldn't be more pleased with the experience. Their team was incredibly responsive.",
+    text: "I recently opted for Synapto Offices' Virtual Office and Company Formation services, and couldn't be more pleased with the experience. Their team was incredibly responsive.",
     rating: 5,
   },
 ]

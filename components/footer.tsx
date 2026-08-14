@@ -10,11 +10,11 @@ export default function Footer() {
           {/* About */}
           <div>
             <h3 className="text-2xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent">Audvetax</span>
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent">Synapto</span>
               <span className="text-white"> Systems</span>
             </h3>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Advanced business intelligence and office solutions. Audvetax Systems delivers innovative technology and comprehensive business support services.
+              Advanced business intelligence and office solutions. Synapto Systems delivers innovative technology and comprehensive business support services.
             </p>
           </div>
 
@@ -70,12 +70,12 @@ export default function Footer() {
         <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2026 Audvetax. All rights reserved.
+              © 2026 Synapto. All rights reserved.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-gray-300 hover:text-white transition">f</a>
-              <a href="#" className="text-gray-300 hover:text-white transition">📷</a>
-              <a href="#" className="text-gray-300 hover:text-white transition">▶</a>
+              <a href="#" className="text-gray-300 hover:text-white transition"><img src="./facebook.svg" alt="Facebook" className="h-5 w-5" /></a>
+              <a href="#" className="text-gray-300 hover:text-white transition"><img src="./instagram.svg" alt="Twitter" className="h-5 w-5" /></a>
+              <a href="#" className="text-gray-300 hover:text-white transition"><img src="./youtube.svg" alt="YouTube" className="h-5 w-5" /></a>
             </div>
           </div>
         </div>

@@ -21,7 +21,7 @@ export default function BlogCarousel() {
       category: 'Business Tips',
       date: 'May 15, 2026',
       excerpt: 'Learn how to establish a professional virtual office presence for your company.',
-      image: 'https://images.unsplash.com/photo-1553531088-189a28e88f40?w=600&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop',
     },
   ]
 
