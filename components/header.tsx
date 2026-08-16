@@ -97,7 +97,7 @@ export default function Header() {
               <span aria-hidden="true" className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-400 to-blue-500 text-lg font-black text-white sm:h-10 sm:w-10 sm:text-2xl">A</span>
               <div className="min-w-0">
                 <div className="truncate text-lg font-bold text-gray-900 sm:text-xl">
-                  <span className="bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent">AUDVETAX</span>
+                  <span className="bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent">AUDVERTAX</span>
                   <span className="ml-1 text-gray-900"></span>
                 </div>
                 <p className="mt-0.5 text-[10px] leading-tight text-gray-600 sm:text-xs">Global Business Support Solutions</p>

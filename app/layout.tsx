@@ -7,7 +7,7 @@ import { CartProvider } from '@/components/cart-provider'
 import { UserProvider } from '@/app/user-context'
 
 export const metadata: Metadata = {
-  title: 'Audvetax - Global Business Support Solutions',
+  title: 'Audvertax - Global Business Support Solutions',
   description: 'Affordable office rental, company formation, and business support solutions. Virtual offices, shared spaces, and business services in UK, USA, and Canada.',
   generator: 'v0.app',
   icons: {
