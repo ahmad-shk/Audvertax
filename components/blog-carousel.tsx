@@ -35,7 +35,7 @@ export default function BlogCarousel() {
         <div className="mb-8 text-center sm:mb-12">
           <p className="mb-2 text-sm font-medium text-blue-600">OUR BLOGS</p>
           <h2 id="blog-heading" className="text-balance text-3xl font-bold text-slate-900 sm:text-4xl">
-            Read Our <span className="bg-gradient-to-r from-blue-600 to-cyan-400 px-2.5 py-1">Recent</span> Stories
+            Read Our <span className="bg-gradient-to-r from-blue-600 to-cyan-400 px-2.5">Recent</span> Stories
           </h2>
         </div>
 

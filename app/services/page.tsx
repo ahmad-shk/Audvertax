@@ -16,7 +16,7 @@ const services = [
       'Available in major cities'
     ],
     pricing: 'Starting from £1/month',
-    countries: ['UK', 'USA', 'Canada']
+    countries: ['UK', 'USA']
   },
   {
     icon: Briefcase,
@@ -32,7 +32,7 @@ const services = [
       'Ongoing support'
     ],
     pricing: 'Starting from £1',
-    countries: ['UK', 'USA', 'Canada']
+    countries: ['UK', 'USA']
   },
   {
     icon: Phone,
@@ -48,7 +48,7 @@ const services = [
       'Mobile & desktop apps'
     ],
     pricing: 'Starting from £1/month',
-    countries: ['UK', 'USA', 'Canada']
+    countries: ['UK', 'USA']
   },
   {
     icon: FileText,
@@ -64,7 +64,7 @@ const services = [
       'Expert guidance'
     ],
     pricing: 'Starting from £1/year',
-    countries: ['UK', 'USA', 'Canada']
+    countries: ['UK', 'USA']
   },
   {
     icon: Globe,
@@ -80,7 +80,7 @@ const services = [
       'Dedicated account manager'
     ],
     pricing: 'Custom pricing',
-    countries: ['UK', 'USA', 'Canada']
+    countries: ['UK', 'USA']
   },
   {
     icon: Briefcase,
@@ -96,7 +96,7 @@ const services = [
       'Business support'
     ],
     pricing: 'Starting from £0 (bank fees apply)',
-    countries: ['UK', 'USA', 'Canada']
+    countries: ['UK', 'USA']
   }
 ]
 
@@ -160,16 +160,24 @@ export default function ServicesPage() {
 
                   {/* Countries & Pricing */}
                   <div className="border-t-2 border-gray-200 pt-4">
-                    <p className="text-sm text-gray-600 mb-2">
-                      <span className="font-semibold">Available in:</span> {service.countries.join(', ')}
-                    </p>
                     <p className="text-lg font-bold text-cyan-600">{service.pricing}</p>
+                    <p className="text-sm text-gray-600 mb-2">
+                      <span className="font-semibold">Available in:</span>
+                      <div className="flex gap-2">
+                      <Link 
+                        // href={serviceSlugByKey[key] ? `/services/${serviceSlugByKey[key]}` : '/contact'}
+                        href="#"
+                        className="w-full mt-4 px-4 py-2 bg-cyan-400 text-gray-900 font-bold rounded-lg hover:bg-blue-500 transition"
+                        
+                        >
+                         {service.countries[0]}
+                      </Link> 
+                      <Link href="#" className="w-full mt-4 px-4 py-2 bg-cyan-400 text-gray-900 font-bold rounded-lg hover:bg-blue-500 transition">
+                         {service.countries[1]}
+                      </Link> 
+                      </div>
+                    </p>
                   </div>
-
-                  {/* CTA */}
-                  <button className="w-full mt-4 px-4 py-2 bg-cyan-400 text-gray-900 font-bold rounded-lg hover:bg-blue-500 transition">
-                    Learn More
-                  </button>
                 </div>
               </div>
             )

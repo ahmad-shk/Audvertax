@@ -80,7 +80,7 @@ export default function CheckoutPage() {
                 </button>
               )}
             </>
-          ) : (
+          ) : ( 
             <div className="p-8 text-center">
               <p className="font-semibold text-slate-900">Your cart is empty.</p>
               <Link href="/services" className="mt-4 inline-block text-blue-600">

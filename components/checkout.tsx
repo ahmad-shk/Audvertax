@@ -8,7 +8,7 @@ import type { CartItem } from '@/components/cart-provider'
 
 const publishableKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
 const stripePromise = publishableKey ? loadStripe(publishableKey) : null
-
+ 
 export default function Checkout({ items }: { items: CartItem[] }) {
   const [clientSecret, setClientSecret] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)

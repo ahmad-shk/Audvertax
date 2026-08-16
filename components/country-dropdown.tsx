@@ -102,16 +102,17 @@ interface CountryDropdownProps {
 
 export default function CountryDropdown({ country, label, isOpen, onOpen, onClose }: CountryDropdownProps) {
   const { t } = useLanguage()
-  const data = countryData[country]
+  const data = countryData[country] 
 
   return (
     <div
       className="relative group"
-      onMouseEnter={onOpen}
-      onMouseLeave={onClose}
+      // onMouseEnter={onOpen}
+      // onMouseLeave={onClose}
+      onClick={isOpen ? onClose : onOpen}
     >
       <button
-        type="button"
+        type="button" 
         aria-expanded={isOpen}
         className="flex items-center gap-1 rounded-lg px-3 py-2 font-medium text-gray-900 transition hover:bg-cyan-50 hover:text-blue-600"
         onClick={onOpen}

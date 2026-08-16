@@ -8,7 +8,7 @@ export default function HeroSection() {
   const [searchTerm, setSearchTerm] = useState('')
 
   return (
-    <section className="relative isolate overflow-hidden bg-slate-950 px-1 text-white py-12 sm:py-20 md:py-28">
+    <section className=" overflow-hidden bg-slate-950 px-1 text-white py-12 sm:py-20 md:py-28">
       <div className="absolute inset-0 -z-10">
         <img
           src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&h=900&fit=crop"

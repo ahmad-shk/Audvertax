@@ -46,11 +46,12 @@ export default function Header() {
   }, [lastScrollY])
 
   return (
-    <header className={`sticky top-0 z-50 border-t-4 border-cyan-400 bg-white/95 shadow-sm backdrop-blur-md transition-transform duration-300 ${
-      isHeaderVisible ? 'translate-y-0' : '-translate-y-full'
+    <header className={`-md:sticky top-0 z-50 border-t-4 border-cyan-400 bg-white/95 shadow-sm backdrop-blur-md transition-transform duration-300 ${
+      isHeaderVisible 
+      // ? '-translate-y-0' : '-translate-y-full'
     }`}>
       {/* Top Contact Bar */}
-      {/* <div className="overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-400 px-4 py-1.5 text-gray-900 sm:px-6 lg:px-8">
+      <div className="overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-400 px-4 py-1.5 text-gray-900 sm:px-6 lg:px-8">
         <div className="header-marquee-track mx-auto flex w-max items-center gap-8 whitespace-nowrap text-xs font-medium sm:text-sm">
           {[0, 1].map((copy) => (
             <div key={copy} className="flex items-center gap-5 sm:gap-6" aria-hidden={copy === 1}>
@@ -70,10 +71,10 @@ export default function Header() {
                 <Phone size={14} />
                 <span>{t('call')}</span>
               </a>
-              <button onClick={() => setIsLanguageOpen(!isLanguageOpen)} className="flex items-center gap-1.5 hover:text-gray-700 transition" tabIndex={copy === 1 ? -1 : 0}>
+              {/* <button onClick={() => setIsLanguageOpen(!isLanguageOpen)} className="flex items-center gap-1.5 hover:text-gray-700 transition" tabIndex={copy === 1 ? -1 : 0}>
                 <Globe size={14} />
                 <span className="font-bold">{language.toUpperCase()}</span>
-              </button>
+              </button> */}
             </div>
           ))}
         </div>
@@ -86,7 +87,7 @@ export default function Header() {
             ))}
           </div>
         )}
-      </div> */}
+      </div>
 
       {/* Main Header */}
       <div className="border-b border-gray-200">
@@ -134,16 +135,12 @@ export default function Header() {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="md:hidden mt-4 pt-4 border-t border-gray-200 space-y-2">
+            <div className="md:hidden mt-4 pt-4 border-t border-gray-200 space-y-2 relative z-50">
               <a href="#" className="block py-2 text-gray-900 font-medium hover:text-blue-600">
                 {t('home')}
               </a>
-              <button className="block w-full text-left py-2 text-gray-900 font-medium hover:text-blue-600">
-                UK
-              </button>
-              <button className="block w-full text-left py-2 text-gray-900 font-medium hover:text-blue-600">
-                USA
-              </button>
+              <CountryDropdown country="uk" label="UK" isOpen={activeCountry === 'uk'} onOpen={() => setActiveCountry('uk')} onClose={() => setActiveCountry(null)} />
+             <CountryDropdown country="usa" label="USA" isOpen={activeCountry === 'usa'} onOpen={() => setActiveCountry('usa')} onClose={() => setActiveCountry(null)} />
               {/* <button className="block w-full text-left py-2 text-gray-900 font-medium hover:text-blue-600">
                 Canada
               </button> */}

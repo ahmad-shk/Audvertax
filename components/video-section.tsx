@@ -4,7 +4,7 @@ export default function VideoSection() {
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Start, Grow And Get Support For Your Business With Ease With Audvetax&apos;
-          <span className="bg-cyan-400 px-3 py-1 ml-2">Proven Expertise</span>
+          <span className="bg-cyan-400 px-3 leading-relaxed ml-2">Proven Expertise</span>
           & Hassle Free Solutions. Watch Our Corporate Video To Learn More About Us And What We Can Offer.
         </h2>
 

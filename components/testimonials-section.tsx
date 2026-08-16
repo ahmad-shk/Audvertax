@@ -62,7 +62,7 @@ export default function TestimonialsSection() {
         <div className="mb-8 text-center sm:mb-12">
           <p className="mb-2 text-sm font-medium text-slate-500">OUR REVIEWS</p>
           <h2 id="reviews-heading" className="text-balance text-3xl font-bold text-slate-900 sm:text-4xl">
-            See What Our <span className="bg-cyan-400 px-2.5 py-1">Customers</span> Are Saying
+            See What Our <span className="bg-cyan-400 px-2.5">Customers</span> Are Saying
           </h2>
         </div>
 
