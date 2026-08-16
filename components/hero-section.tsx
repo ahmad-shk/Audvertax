@@ -2,6 +2,7 @@
 
 import { ArrowRight, CheckCircle2, Search, Sparkles } from 'lucide-react'
 import { useState } from 'react'
+import Link from 'next/link'
 
 export default function HeroSection() {
   const [searchTerm, setSearchTerm] = useState('')
@@ -41,13 +42,15 @@ export default function HeroSection() {
           </div>
 
           <div className="mt-10 flex flex-wrap gap-3">
-            <button className="group inline-flex items-center gap-2 rounded-full bg-cyan-300 px-6 py-3.5 font-bold text-slate-950 transition hover:bg-cyan-200 hover:shadow-xl hover:shadow-cyan-300/20">
+            {/* <button className="group inline-flex items-center gap-2 rounded-full bg-cyan-300 px-6 py-3.5 font-bold text-slate-950 transition hover:bg-cyan-200 hover:shadow-xl hover:shadow-cyan-300/20">
               Start Now
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-            </button>
-            <button className="rounded-full border border-white/40 px-6 py-3.5 font-bold text-white transition hover:border-white hover:bg-white/10">
+            </button> */}
+            <Link href="/services" className="rounded-full border border-white/40 px-6 py-3.5 font-bold text-white transition hover:border-white hover:bg-white/10">
+            {/* <button> */}
               Explore services
-            </button>
+            {/* </button> */}
+            </Link>
           </div>
         </div>
 
@@ -56,14 +59,14 @@ export default function HeroSection() {
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-blue-600">Find your best fit</p>
             <h2 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">What can we help you launch?</h2>
             <div className="relative mt-6">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
+              {/* <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
               <input
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full rounded-xl border border-slate-200 bg-slate-50 py-4 pl-12 pr-4 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10"
-              />
+              /> */}
             </div>
             <div className="mt-5 grid grid-cols-2 gap-3 text-sm">
               {['Office space', 'Virtual office', 'Company setup', 'Call answering'].map((item) => (

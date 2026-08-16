@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowLeft, CheckCircle2, Clock3, Headphones } from 'lucide-react'
+import { ArrowLeft, ArrowRight, CheckCircle2, Clock3, Headphones } from 'lucide-react'
 import { notFound } from 'next/navigation'
 import AddToCartButton from '@/components/add-to-cart-button'
 import { getServiceBySlug } from '@/lib/services-data'
@@ -14,8 +14,9 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   return (
     <main className="min-h-screen bg-slate-50">
       <div className="border-t-4 border-cyan-400 bg-slate-950 px-4 py-5 text-white sm:px-6">
-        <div className="mx-auto max-w-6xl">
-          <Link href="/services" className="inline-flex items-center gap-2 text-sm text-cyan-300 hover:text-white"><ArrowLeft size={16} /> All services</Link>
+        <div className="mx-auto max-w-6xl flex justify-between">
+          <Link href="/" className="inline-flex items-center gap-2 text-sm text-cyan-300 hover:text-white"><ArrowLeft size={16} />Back to home</Link>
+          <Link href="/services" className="inline-flex items-center gap-2 text-sm text-cyan-300 hover:text-white">All services<ArrowRight size={16} /></Link>
         </div>
       </div>
       <section className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-[1.1fr_0.9fr] md:py-16">

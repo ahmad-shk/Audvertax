@@ -21,7 +21,7 @@ export default function Page() {
         <FeaturedServices />
         <BlogCarousel />
         <GlobalCoverageSection />
-        <EarnMoneySection />
+        {/* <EarnMoneySection /> */}
         <VideoSection />
         <TestimonialsSection />
         <Footer />

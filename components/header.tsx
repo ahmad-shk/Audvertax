@@ -50,7 +50,7 @@ export default function Header() {
       isHeaderVisible ? 'translate-y-0' : '-translate-y-full'
     }`}>
       {/* Top Contact Bar */}
-      <div className="overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-400 px-4 py-1.5 text-gray-900 sm:px-6 lg:px-8">
+      {/* <div className="overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-400 px-4 py-1.5 text-gray-900 sm:px-6 lg:px-8">
         <div className="header-marquee-track mx-auto flex w-max items-center gap-8 whitespace-nowrap text-xs font-medium sm:text-sm">
           {[0, 1].map((copy) => (
             <div key={copy} className="flex items-center gap-5 sm:gap-6" aria-hidden={copy === 1}>
@@ -86,7 +86,7 @@ export default function Header() {
             ))}
           </div>
         )}
-      </div>
+      </div> */}
 
       {/* Main Header */}
       <div className="border-b border-gray-200">
@@ -111,7 +111,7 @@ export default function Header() {
               </a>
               <CountryDropdown country="uk" label="UK" isOpen={activeCountry === 'uk'} onOpen={() => setActiveCountry('uk')} onClose={() => setActiveCountry(null)} />
               <CountryDropdown country="usa" label="USA" isOpen={activeCountry === 'usa'} onOpen={() => setActiveCountry('usa')} onClose={() => setActiveCountry(null)} />
-              <CountryDropdown country="canada" label="Canada" isOpen={activeCountry === 'canada'} onOpen={() => setActiveCountry('canada')} onClose={() => setActiveCountry(null)} />
+              {/* <CountryDropdown country="canada" label="Canada" isOpen={activeCountry === 'canada'} onOpen={() => setActiveCountry('canada')} onClose={() => setActiveCountry(null)} /> */}
             </nav>
 
             {/* Right Side */}
@@ -144,9 +144,9 @@ export default function Header() {
               <button className="block w-full text-left py-2 text-gray-900 font-medium hover:text-blue-600">
                 USA
               </button>
-              <button className="block w-full text-left py-2 text-gray-900 font-medium hover:text-blue-600">
+              {/* <button className="block w-full text-left py-2 text-gray-900 font-medium hover:text-blue-600">
                 Canada
-              </button>
+              </button> */}
               <CartLink />
               {isLoggedIn ? <div className="mt-4 flex gap-2"><Link href="/dashboard" className="flex-1 rounded border-2 border-cyan-400 px-4 py-2 text-center text-sm font-bold text-slate-950">Dashboard</Link><button onClick={() => { logout(); router.push('/') }} className="rounded border-2 border-slate-900 px-4 py-2 text-sm font-bold text-slate-900">Sign out</button></div> : <Link href="/login" className="mt-4 block w-full rounded border-2 border-gray-900 px-4 py-2 text-center text-sm font-medium text-gray-900 transition hover:bg-gray-50">{t('clientLogin')}</Link>}
             </div>

@@ -19,15 +19,15 @@ export default function GlobalCoverageSection() {
             <p className="text-gray-700 mb-6">
               We support clients from a wide range of countries worldwide - including regions many providers do not serve - making UK company formation accessible wherever you are.
             </p>
-            <button className="bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition font-medium">
+            {/* <button className="bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition font-medium">
               View Supported Countries →
-            </button>
+            </button> */}
           </div>
           <div className="flex justify-center">
             <div className="w-64 h-64 bg-gradient-to-br from-blue-600 to-cyan-400 rounded-full flex items-center justify-center shadow-2xl">
               <div className="text-center text-white">
-                <div className="text-4xl font-bold mb-2">38+</div>
-                <div className="text-sm">Countries</div>
+                <div className="text-4xl font-bold mb-2">GLOBAL</div>
+                <div className="text-sm">COVERAGE</div>
               </div>
             </div>
           </div>
