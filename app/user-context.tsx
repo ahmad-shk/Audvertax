@@ -120,7 +120,7 @@ export function getAccountsKey() { return ACCOUNTS_KEY }
 export function getSessionKey() { return SESSION_KEY }
 export function updateStoredAccount(account: StoredAccount) {
   const accounts = readAccounts().map((item) => item.id === account.id ? account : item)
-  saveAccounts(accounts)
+  saveAccounts(accounts) 
 }
 
 export type { StoredAccount }

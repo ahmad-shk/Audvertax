@@ -1,5 +1,13 @@
 export type Country = 'uk' | 'usa' | 'canada'
 
+export interface ServicePackage {
+  type: 'standard' | 'premium'
+  price: string
+  features: string[]
+  documents: string[]
+  banks?: string[]
+}
+
 export interface Service {
   id: string
   name: string
@@ -10,6 +18,7 @@ export interface Service {
   pricing: string
   category: 'best-sellers' | 'company-services' | 'office-rental' | 'custom-website' | 'shopify-setup' | 'bank-creation'
   countries: Country[]
+  packages?: ServicePackage[]
   leadTime?: string
   support?: string
   image?: string
@@ -49,6 +58,49 @@ export const servicesData: Service[] = [
       'Certificate of incorporation',
       'Business documentation',
       'Initial filing',
+    ],
+    packages: [
+       {
+         type: "standard",
+         price: "165 gbp",
+         features: [
+          'Director id verification',
+          'UK registered address',
+          'Lease agreement as proof of address'
+         ],
+         documents: [
+          'article of aasociation',
+          'memorandum of association',
+          'certificate of incorporation',
+          'UTR no',
+          'authentication code'
+         ]
+       },
+       {
+         type: "premium",
+         price: "225 gbp",
+         features: [
+          'Director id verification',
+          'UK registered address',
+          'Lease agreement as proof of address',
+          'bank creation'
+         ],
+         documents: [
+          'article of aasociation',
+          'memorandum of association',
+          'certificate of incorporation',
+          'UTR no',
+          'authentication code'
+         ],
+         banks:[
+          'wise',
+          'tide',
+          'taptap',
+          'payoneer',
+          'sunrate',
+          'paypal'
+         ]
+       }
     ],
     pricing: 'From £1',
     category: 'best-sellers',

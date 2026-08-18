@@ -131,7 +131,7 @@ export default function CountryDropdown({ country, label, isOpen, onOpen, onClos
 
           <div className="grid max-h-[min(70vh,620px)] grid-cols-1 gap-6 overflow-y-auto px-5 py-6 sm:px-8 md:grid-cols-3 md:gap-8">
               {/* Best Sellers */}
-              <div>
+              <div> 
                 <div className="flex items-center gap-2 mb-6">
                   <div className="h-1 w-12 bg-gradient-to-r from-blue-600 to-cyan-400 rounded"></div>
                   <h3 className="font-bold text-blue-600 text-sm uppercase tracking-wider">Best Sellers</h3>

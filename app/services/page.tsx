@@ -31,6 +31,48 @@ const services = [
       'Business documentation',
       'Ongoing support'
     ],
+    packages: [
+      {
+        type: "standard",
+        price: "165",
+        features: [
+          'Director id verification',
+          'UK registered address',
+          'Lease agreement as proof of address'
+        ],
+        documents: [
+          'article of aasociation',
+          'memorandum of association',
+          'certificate of incorporation',
+          'UTR no',
+          'authentication code'
+        ]
+      },
+      {
+        type: "premium",
+        price: "225",
+        features: [
+          'Director id verification',
+          'UK registered address',
+          'Lease agreement as proof of address'
+        ],
+        documents: [
+          'article of aasociation',
+          'memorandum of association',
+          'certificate of incorporation',
+          'UTR no',
+          'authentication code'
+        ],
+        banks: [
+          'wise',
+          'tide',
+          'taptap',
+          'payoneer',
+          'sunrate',
+          'paypal'
+        ]
+      }
+    ],
     pricing: 'Starting from £1',
     countries: ['UK', 'USA']
   },
@@ -121,9 +163,9 @@ const faqs = [
 
 export default function ServicesPage() {
   return (
-    <div className="bg-white">
+    <div className="bg-white" >
       {/* Header */}
-      <div className="border-t-4 border-cyan-400 bg-gradient-to-r from-gray-900 to-gray-800 px-4 py-12 text-white sm:px-6 sm:py-16 lg:px-8">
+      < div className="border-t-4 border-cyan-400 bg-gradient-to-r from-gray-900 to-gray-800 px-4 py-12 text-white sm:px-6 sm:py-16 lg:px-8" >
         <div className="max-w-7xl mx-auto">
           <Link href="/" className="text-cyan-400 hover:text-yellow-300 font-medium text-sm mb-4 inline-block">
             ← Back to Home
@@ -133,10 +175,10 @@ export default function ServicesPage() {
             Comprehensive business solutions designed to help you establish and grow your company globally.
           </p>
         </div>
-      </div>
+      </div >
 
       {/* Services Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      < div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20" >
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, idx) => {
             const Icon = service.icon
@@ -150,7 +192,12 @@ export default function ServicesPage() {
 
                   {/* Features */}
                   <div className="space-y-2 mb-6">
-                    {service.features.map((feature, fidx) => (
+                    {service.packages ? service.packages.map((pack, fidx) => (
+                      <div key={fidx} className="flex items-center gap-2">
+                        <CheckCircle className="text-cyan-400 flex-shrink-0" size={16} />
+                        <span className="text-sm text-gray-700">{pack.type}</span>
+                      </div>
+                    )) : service.features.map((feature, fidx) => (
                       <div key={fidx} className="flex items-center gap-2">
                         <CheckCircle className="text-cyan-400 flex-shrink-0" size={16} />
                         <span className="text-sm text-gray-700">{feature}</span>
@@ -161,32 +208,31 @@ export default function ServicesPage() {
                   {/* Countries & Pricing */}
                   <div className="border-t-2 border-gray-200 pt-4">
                     <p className="text-lg font-bold text-cyan-600">{service.pricing}</p>
-                    <p className="text-sm text-gray-600 mb-2">
+                    <div className="text-sm text-gray-600 mb-2">
                       <span className="font-semibold">Available in:</span>
-                      <div className="flex gap-2">
-                      <Link 
-                        // href={serviceSlugByKey[key] ? `/services/${serviceSlugByKey[key]}` : '/contact'}
-                        href="#"
-                        className="w-full mt-4 px-4 py-2 bg-cyan-400 text-gray-900 font-bold rounded-lg hover:bg-blue-500 transition"
-                        
+                      <div className="flex gap-2 text-center">
+                        <Link
+                          href={service.title ? `/services/${service.title}` : '/contact'}
+                          // href="#"
+                          className="w-full mt-4 px-4 py-2 bg-cyan-400 text-gray-900 font-bold rounded-lg hover:bg-blue-500 transition"
                         >
-                         {service.countries[0]}
-                      </Link> 
-                      <Link href="#" className="w-full mt-4 px-4 py-2 bg-cyan-400 text-gray-900 font-bold rounded-lg hover:bg-blue-500 transition">
-                         {service.countries[1]}
-                      </Link> 
+                          {service.countries[0]}
+                        </Link>
+                        <Link href="#" className="w-full mt-4 px-4 py-2 bg-cyan-400 text-gray-900 font-bold rounded-lg hover:bg-blue-500 transition">
+                          {service.countries[1]}
+                        </Link>
                       </div>
-                    </p>
+                    </div>
                   </div>
                 </div>
               </div>
             )
           })}
         </div>
-      </div>
+      </div >
 
       {/* Why Choose Us */}
-      <div className="bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
+      < div className="bg-gray-50 py-20 px-4 sm:px-6 lg:px-8" >
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">Why Choose Audvetax</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -204,10 +250,10 @@ export default function ServicesPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div >
 
       {/* Service Process */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      < div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20" >
         <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">Our Simple Process</h2>
         <div className="grid md:grid-cols-4 gap-6">
           {[
@@ -225,10 +271,10 @@ export default function ServicesPage() {
             </div>
           ))}
         </div>
-      </div>
+      </div >
 
       {/* CTA Section */}
-      <div className="bg-cyan-50 py-16 px-4 sm:px-6 lg:px-8 border-t-4 border-cyan-400">
+      < div className="bg-cyan-50 py-16 px-4 sm:px-6 lg:px-8 border-t-4 border-cyan-400" >
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Ready to Get Started?</h2>
           <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
@@ -238,7 +284,7 @@ export default function ServicesPage() {
             Contact Us Today
           </Link>
         </div>
-      </div>
-    </div>
+      </div >
+    </div >
   )
 }
