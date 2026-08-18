@@ -95,7 +95,7 @@ export default function Header() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex min-w-0 shrink items-center gap-2 hover:opacity-80 transition sm:gap-3">
-              <span aria-hidden="true" className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-400 to-blue-500 text-lg font-black text-white sm:h-10 sm:w-10 sm:text-2xl">A</span>
+              <img src="/audvertax.png" alt="Audvertax logo" className="h-9 w-9 object-contain" />
               <div className="min-w-0">
                 <div className="truncate text-lg font-bold text-gray-900 sm:text-xl">
                   <span className="bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent">AUDVERTAX</span>

@@ -45,7 +45,7 @@ export default function SignupPage() {
       <div className="border-t-4 border-cyan-400">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition">
-            <span aria-hidden="true" className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-400 to-blue-500 text-lg font-black text-white">A</span>
+            <img src="/audvertax.png" alt="Audvertax logo" className="h-8 w-8 object-contain" />
             <span className="text-2xl font-bold">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">AUDVETAX</span>
               <span className="ml-1 text-gray-900">SYSTEMS</span>
