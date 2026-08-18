@@ -7,6 +7,7 @@ import { useLanguage } from '@/app/language-context'
 const serviceSlugByKey: Record<string, string> = {
   virtualOffices: 'virtual-offices',
   ltdCompanyFormation: 'ltd-company-formation',
+  llcCompanyFormation: 'llc-company-formation',
   sharedOffices: 'shared-offices',
   ukBankAccounts: 'uk-bank-accounts',
   companyAnnualAccounts: 'company-annual-accounts',
@@ -61,7 +62,7 @@ const countryData = {
   usa: {
     bestSellers: [
       'virtualOffices',
-      'ltdCompanyFormation',
+      'llcCompanyFormation',
       'ukBankAccounts',
     ],
     companyServices: [

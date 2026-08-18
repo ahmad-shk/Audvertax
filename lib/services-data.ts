@@ -1,7 +1,7 @@
 export type Country = 'uk' | 'usa' | 'canada'
 
 export interface ServicePackage {
-  type: 'standard' | 'premium'
+  type: 'basic' | 'standard' | 'premium'
   price: string
   features: string[]
   documents: string[]
@@ -16,7 +16,7 @@ export interface Service {
   details: string
   features: string[]
   pricing: string
-  category: 'best-sellers' | 'company-services' | 'office-rental' | 'custom-website' | 'shopify-setup' | 'bank-creation'
+  category: 'best-sellers' | 'company-services' | 'company-registration' | 'taxation' | 'office-rental' | 'custom-website' | 'shopify-setup' | 'bank-creation'
   countries: Country[]
   packages?: ServicePackage[]
   leadTime?: string
@@ -25,6 +25,223 @@ export interface Service {
 }
 
 export const servicesData: Service[] = [
+  // UK-only services from the UK website requirements
+  {
+    id: 'director-id-verification',
+    name: 'Director ID Verification',
+    slug: 'director-id-verification',
+    description: 'Secure director identity verification for UK company registration and compliance.',
+    details: 'Fast-track your UK company setup with secure ID verification, document checks, and compliance guidance for directors.',
+    features: [
+      'Director ID verification',
+      'Passport review',
+      'Bank statement check',
+      'Compliance support',
+      'Fast onboarding',
+    ],
+    pricing: '£25',
+    category: 'company-registration',
+    countries: ['uk'],
+    packages: [
+      {
+        type: 'standard',
+        price: '£25',
+        features: [
+          'Director ID verification',
+          'Document review',
+          'Compliance check',
+        ],
+        documents: [
+          'Passport',
+          'Bank statement',
+          'Residential address proof',
+        ],
+      },
+    ],
+    leadTime: '2-3 business days',
+    support: 'Compliance support team',
+  },
+  {
+    id: 'uk-registered-address',
+    name: 'UK Registered Address',
+    slug: 'uk-registered-address',
+    description: 'A compliant UK business address for your LTD registration and ongoing mail handling.',
+    details: 'Use a trusted UK registered office address for company formation, correspondence, and business setup.',
+    features: [
+      'UK registered address',
+      'Mail handling',
+      'Address verification',
+      'Business correspondence support',
+    ],
+    pricing: '£40/year',
+    category: 'company-registration',
+    countries: ['uk'],
+    packages: [
+      {
+        type: 'standard',
+        price: '£40/year',
+        features: [
+          'UK registered address',
+          'Mail forwarding support',
+          'Proof of address support',
+        ],
+        documents: [
+          'Passport',
+          'Utility bill',
+          'Business correspondence details',
+        ],
+      },
+    ],
+    leadTime: '3-5 business days',
+    support: 'Address support team',
+  },
+  {
+    id: 'corporate-tax-filing',
+    name: 'Corporate Tax Filing',
+    slug: 'corporate-tax-filing',
+    description: 'UK corporate tax filing services including CT600 and company house submissions.',
+    details: 'Support for CT600 filings, company house submissions, and compliance for UK businesses.',
+    features: [
+      'Corporate tax filing (CT600)',
+      'Company house filing',
+      'Compliance review',
+      'Accounts support',
+      'Tax advice',
+    ],
+    pricing: 'From £125',
+    category: 'taxation',
+    countries: ['uk'],
+    packages: [
+      {
+        type: 'basic',
+        price: '£125',
+        features: [
+          'Corporate tax filing (CT600)',
+          'Company house filing',
+          'Business document review',
+        ],
+        documents: [
+          'LTD registration number',
+          'UTR number',
+          'Authentication code',
+          'HMRC login details',
+          'Company bank statement',
+        ],
+      },
+      {
+        type: 'premium',
+        price: '£175',
+        features: [
+          'Corporate tax filing (CT600)',
+          'Company house filing',
+          'Accounts review',
+          'Custom compliance support',
+        ],
+        documents: [
+          'LTD registration number',
+          'UTR number',
+          'Authentication code',
+          'HMRC login details',
+          'Company bank statement',
+          'Accounts and reports',
+        ],
+      },
+    ],
+    leadTime: '3-5 business days',
+    support: 'Tax support team',
+  },
+  {
+    id: 'confirmation-statement',
+    name: 'Confirmation Statement',
+    slug: 'confirmation-statement',
+    description: 'Annual confirmation statement filing for UK companies.',
+    details: 'File your annual company confirmation statement with full support for login, company details, and filing review.',
+    features: [
+      'Confirmation statement filing',
+      'Company house login support',
+      'Director code assistance',
+      'Address confirmation',
+    ],
+    pricing: '£75',
+    category: 'taxation',
+    countries: ['uk'],
+    packages: [
+      {
+        type: 'standard',
+        price: '£75',
+        features: [
+          'Confirmation statement filing',
+          'Company house login support',
+          'Director code guidance',
+        ],
+        documents: [
+          'Company house login email',
+          'Company house login password',
+          'Director personal code',
+          'LTD address',
+        ],
+      },
+    ],
+    leadTime: '3-5 business days',
+    support: 'Company secretarial support',
+  },
+  {
+    id: 'vat-registration',
+    name: 'VAT Registration',
+    slug: 'vat-registration',
+    description: 'Complete UK VAT registration support for new and growing businesses.',
+    details: 'Register your business for VAT with full onboarding support, documentation review, and account setup guidance.',
+    features: [
+      'VAT registration',
+      'Client gateway setup',
+      'Business and personal contact review',
+      'UK bank details review',
+      'Compliance onboarding',
+    ],
+    pricing: 'From £1',
+    category: 'taxation',
+    countries: ['uk'],
+    leadTime: '3-5 business days',
+    support: 'VAT registration specialist',
+  },
+  {
+    id: 'vat-return-filing',
+    name: 'VAT Return Filing',
+    slug: 'vat-return-filing',
+    description: 'Regular VAT return filing and compliance support for UK businesses.',
+    details: 'Keep your VAT returns filed accurately and on time with review support for login credentials, accounting records, and HMRC submissions.',
+    features: [
+      'VAT return filing',
+      'HMRC login support',
+      'Submission review',
+      'Bank statement review',
+      'Compliance guidance',
+    ],
+    pricing: 'From £70',
+    category: 'taxation',
+    countries: ['uk'],
+    packages: [
+      {
+        type: 'basic',
+        price: '£70',
+        features: [
+          'VAT return filing',
+          'HMRC login support',
+          'Submission review',
+        ],
+        documents: [
+          'LTD registration number',
+          'UTR number',
+          'VRN number',
+          'Authentication code',
+          'HMRC login email',
+          'HMRC login password',
+        ],
+      },
+    ],
+    leadTime: '3-5 business days',
+    support: 'VAT filing support team',
+  },
   // Best Sellers & Company Services (All Countries)
   {
     id: 'virtual-offices',
@@ -62,7 +279,7 @@ export const servicesData: Service[] = [
     packages: [
        {
          type: "standard",
-         price: "165 gbp",
+         price: "£165",
          features: [
           'Director id verification',
           'UK registered address',
@@ -78,7 +295,7 @@ export const servicesData: Service[] = [
        },
        {
          type: "premium",
-         price: "225 gbp",
+         price: "£225",
          features: [
           'Director id verification',
           'UK registered address',
@@ -102,11 +319,242 @@ export const servicesData: Service[] = [
          ]
        }
     ],
-    pricing: 'From £1',
+    pricing: 'From £165',
     category: 'best-sellers',
     countries: ['uk', 'usa', 'canada'],
     leadTime: '1-2 days',
     support: 'Dedicated account manager',
+  },
+  {
+    id: 'llc-company-formation',
+    name: 'LLC Company Formation',
+    slug: 'llc-company-formation',
+    description: 'Fast and simple LLC formation for US clients',
+    details: 'Set up your US entity with our streamlined LLC formation support, including filing guidance and business setup assistance.',
+    features: [
+      'LLC filing support',
+      'Registered agent guidance',
+      'Business setup documentation',
+      'State filing assistance',
+      'Compliance support',
+      'Entity formation checklist',
+    ],
+    packages: [
+      {
+        type: 'standard',
+        price: '$199 + state fees',
+        features: [
+          'LLC registration',
+          'Registered agent for 1 year',
+          'Business mailing address',
+          'US phone number',
+          'EIN no.',
+          'Business Payoneer account',
+          'Business Stripe account',
+        ],
+        documents: [
+          'Business name',
+          'Company type',
+          'State selection',
+          'Owner details',
+          'Passport or CNIC',
+          'Bank statement or utility bill',
+        ],
+      },
+      {
+        type: 'premium',
+        price: '$299 + state fees',
+        features: [
+          'LLC registration',
+          'Registered agent for 1 year',
+          'Business mailing address',
+          'US phone number',
+          'EIN no.',
+          'Business Payoneer account',
+          'Business Stripe account',
+          'Unique business address',
+          'ITIN',
+          'PayPal account setup',
+        ],
+        documents: [
+          'Business name',
+          'Company type',
+          'State selection',
+          'Owner details',
+          'Passport or CNIC',
+          'Bank statement or utility bill',
+        ],
+      },
+    ],
+    pricing: 'From $199 + state fees',
+    category: 'best-sellers',
+    countries: ['usa'],
+    leadTime: '3-5 days',
+    support: 'Dedicated US formation advisor',
+  },
+  {
+    id: 'company-registration',
+    name: 'Company Registration',
+    slug: 'company-registration',
+    description: 'USA company registration service with state-specific filing support and compliance setup.',
+    details: 'Register your US company with guidance for entity type, state selection, member details, and required filing documents.',
+    features: [
+      'LLC or corporation registration',
+      'State selection guidance',
+      'Member and owner details support',
+      'Business mailing and phone setup',
+      'Compliance-ready onboarding',
+      'Setup for EIN and banking support',
+    ],
+    packages: [
+      {
+        type: 'basic',
+        price: '$125 + state fees',
+        features: [
+          'LLC registration',
+          'Registered agent for 1 year',
+          'Business mailing address',
+          'US phone number',
+          'EIN no.',
+          'Business Payoneer account',
+          'Business Stripe account',
+        ],
+        documents: [
+          'Business name',
+          'Company type',
+          'State selection',
+          'Owner details',
+          'Passport or CNIC',
+          'Bank statement or utility bill',
+        ],
+      },
+      {
+        type: 'standard',
+        price: '$174 + state fees',
+        features: [
+          'LLC registration',
+          'Registered agent for 1 year',
+          'Business mailing address',
+          'US phone number',
+          'EIN no.',
+          'Business Payoneer account',
+          'Business Stripe account',
+          'Unique business address',
+        ],
+        documents: [
+          'Business name',
+          'Company type',
+          'State selection',
+          'Owner details',
+          'Passport or CNIC',
+          'Bank statement or utility bill',
+        ],
+      },
+      {
+        type: 'premium',
+        price: '$280 + state fees',
+        features: [
+          'LLC registration',
+          'Registered agent for 1 year',
+          'Business mailing address',
+          'US phone number',
+          'EIN no.',
+          'Business Payoneer account',
+          'Business Stripe account',
+          'Unique business address',
+          'ITIN',
+          'PayPal account setup',
+        ],
+        documents: [
+          'Business name',
+          'Company type',
+          'State selection',
+          'Owner details',
+          'Passport or CNIC',
+          'Bank statement or utility bill',
+        ],
+      },
+    ],
+    pricing: 'From $125 + state fees',
+    category: 'company-registration',
+    countries: ['usa'],
+    leadTime: '3-7 days',
+    support: 'US incorporation specialist',
+  },
+  {
+    id: 'us-taxation',
+    name: 'US Taxation',
+    slug: 'us-taxation',
+    description: 'Tax compliance services for US business operations, including ITIN and EIN applications.',
+    details: 'Support for ITIN applications and international EIN applications for resident and non-resident business owners.',
+    features: [
+      'ITIN application support',
+      'International EIN for resident owners',
+      'International EIN for non-resident owners',
+      'Compliance guidance',
+      'Filing document support',
+      'Business tax setup assistance',
+    ],
+    pricing: 'From $10',
+    category: 'taxation',
+    countries: ['usa'],
+    leadTime: '3-10 days',
+    support: 'Tax support team',
+  },
+  {
+    id: 'itin',
+    name: 'ITIN',
+    slug: 'itin',
+    description: 'Apply for an ITIN with document support and tax application guidance.',
+    details: 'Complete ITIN support for individuals who need an Individual Taxpayer Identification Number.',
+    features: [
+      'Personal ITIN application',
+      'Passport document support',
+      'Email and phone support',
+      'Payment setup',
+      'Client portal sign-up',
+    ],
+    pricing: '$150',
+    category: 'taxation',
+    countries: ['usa'],
+    leadTime: '5-10 days',
+    support: 'Tax filing specialist',
+  },
+  {
+    id: 'international-ein-resident',
+    name: 'International EIN (Resident)',
+    slug: 'international-ein-resident',
+    description: 'Resident EIN support for international business owners and responsible parties.',
+    details: 'Apply for a U.S. EIN for resident individuals with an entity or responsible party structure.',
+    features: [
+      'Resident EIN application support',
+      'Entity document review',
+      'Phone and WhatsApp support',
+      'Simple onboarding and payment',
+    ],
+    pricing: '$10',
+    category: 'taxation',
+    countries: ['usa'],
+    leadTime: '3-7 days',
+    support: 'EIN support team',
+  },
+  {
+    id: 'international-ein-non-resident',
+    name: 'International EIN (Non-Resident)',
+    slug: 'international-ein-non-resident',
+    description: 'Non-resident EIN support for international business owners and responsible parties.',
+    details: 'Support for non-resident individuals who need a U.S. EIN for business or tax purposes.',
+    features: [
+      'Non-resident EIN application support',
+      'Entity document review',
+      'Phone and WhatsApp support',
+      'Simple onboarding and payment',
+    ],
+    pricing: '$25',
+    category: 'taxation',
+    countries: ['usa'],
+    leadTime: '3-7 days',
+    support: 'EIN support team',
   },
   {
     id: 'uk-bank-accounts',

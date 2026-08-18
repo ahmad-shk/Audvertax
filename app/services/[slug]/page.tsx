@@ -11,6 +11,10 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   const product = service ? getProduct(service.slug) : undefined
   if (!service || !product) notFound()
 
+  const shouldUseContactNext = service.slug === 'ltd-company-formation' || service.slug === 'llc-company-formation'
+  const nextLink = shouldUseContactNext ? '/contact' : `/documents/${service.slug}`
+  const shouldShowAddToCart = service.slug === 'llc-company-formation' || product.priceInCents > 0
+
   return (
     <main className="min-h-screen bg-slate-50">
       <div className="border-t-4 border-cyan-400 bg-slate-950 px-4 py-5 text-white sm:px-6">
@@ -31,7 +35,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
  
                 {pkg.features.map((feature) => <div key={feature} className="flex gap-3 rounded-xl bg-white p-4 shadow-sm"><CheckCircle2 className="mt-0.5 shrink-0 text-cyan-500" size={19} /><span className="text-sm font-medium text-slate-700">{feature}</span></div>)}
               </div> 
-              <Link href={`/documents`} className='inline-flex items-center justify-center gap-2 rounded-xl bg-cyan-400 px-6 py-3 font-bold text-slate-950 transition hover:bg-cyan-300'>Next</Link>
+              <Link href={nextLink} className='inline-flex items-center justify-center gap-2 rounded-xl bg-cyan-400 px-6 py-3 font-bold text-slate-950 transition hover:bg-cyan-300'>Next</Link>
             </div>
             <aside className="h-fit rounded-3xl bg-slate-950 p-6 text-white shadow-2xl sm:p-8">
               <p className="text-sm text-slate-300">Starting price</p>
@@ -44,7 +48,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               </div>
               }
               </div>
-              {product.priceInCents > 0 ? <AddToCartButton productId={product.id} /> : <Link href="/contact" className="inline-flex rounded-xl bg-cyan-400 px-6 py-3 font-bold text-slate-950">Request a quote</Link>}
+              {product.priceInCents > 0 ? <AddToCartButton productId={`${service.slug}-${pkg.type}`} /> : <Link href="/contact" className="inline-flex rounded-xl bg-cyan-400 px-6 py-3 font-bold text-slate-950">Request a quote</Link>}
               <p className="mt-4 text-xs leading-5 text-slate-400">Secure checkout powered by Stripe. Your final total is calculated in your cart.</p>
             </aside>
           </div>
@@ -62,7 +66,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               <p className="text-sm text-slate-300">Starting price</p>
               <p className="mt-2 text-4xl font-bold text-cyan-300">{formatProductPrice(product)}</p>
               <div className="my-6 space-y-3 border-y border-white/10 py-5 text-sm text-slate-200"><p className="flex gap-3"><Clock3 size={18} className="text-cyan-300" /> {service.leadTime ?? 'Fast setup'}</p><p className="flex gap-3"><Headphones size={18} className="text-cyan-300" /> {service.support ?? 'Expert support'}</p></div>
-              {product.priceInCents > 0 ? <AddToCartButton productId={product.id} /> : <Link href="/contact" className="inline-flex rounded-xl bg-cyan-400 px-6 py-3 font-bold text-slate-950">Request a quote</Link>}
+              {shouldShowAddToCart ? <AddToCartButton productId={product.id} /> : <Link href="/contact" className="inline-flex rounded-xl bg-cyan-400 px-6 py-3 font-bold text-slate-950">Request a quote</Link>}
               <p className="mt-4 text-xs leading-5 text-slate-400">Secure checkout powered by Stripe. Your final total is calculated in your cart.</p>
             </aside>
           </div>
