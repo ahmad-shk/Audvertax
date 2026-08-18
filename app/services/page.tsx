@@ -76,7 +76,7 @@ export default function ServicesPage() {
 
   return (
     <div className="bg-white">
-      <div className="border-t-4 border-cyan-400 bg-linear-to-r from-gray-900 to-gray-800 px-4 py-12 text-white sm:px-6 sm:py-16 lg:px-8">
+      <div className="-border-t-4 border-cyan-400 bg-linear-to-r from-gray-900 to-gray-800 px-4 py-12 text-white sm:px-6 sm:py-16 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <Link href="/" className="text-cyan-400 hover:text-yellow-300 font-medium text-sm mb-4 inline-block">
             ← Back to Home

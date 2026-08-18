@@ -17,7 +17,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
   return (
     <main className="min-h-screen bg-slate-50">
-      <div className="border-t-4 border-cyan-400 bg-slate-950 px-4 py-5 text-white sm:px-6">
+      <div className="-border-t-4 border-cyan-400 bg-slate-950 px-4 py-5 text-white sm:px-6">
         <div className="mx-auto max-w-6xl flex justify-between">
           <Link href="/" className="inline-flex items-center gap-2 text-sm text-cyan-300 hover:text-white"><ArrowLeft size={16} />Back to home</Link>
           <Link href="/services" className="inline-flex items-center gap-2 text-sm text-cyan-300 hover:text-white">All services<ArrowRight size={16} /></Link>

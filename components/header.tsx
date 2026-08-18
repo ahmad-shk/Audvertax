@@ -46,7 +46,7 @@ export default function Header() {
   }, [lastScrollY])
 
   return (
-    <header className={`-md:sticky top-0 z-50 border-t-4 border-cyan-400 bg-white/95 shadow-sm backdrop-blur-md transition-transform duration-300 ${
+    <header className={`-md:sticky top-0 z-50 order-t-4 border-cyan-400 bg-white/95 shadow-sm backdrop-blur-md transition-transform duration-300 ${
       isHeaderVisible 
       // ? '-translate-y-0' : '-translate-y-full'
     }`}>
